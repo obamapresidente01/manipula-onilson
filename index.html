@@ -1,0 +1,22 @@
+<!-- Arquivo MovimentandoNaveTeclado.html-->
+<html> <head> 
+    <title>Movimentos com Teclado </title>
+    <script src="gamesWeb.js" </script>
+</head> <body> 
+    <canvas id="canv" width="800" height="700">
+     </canvas>
+     <script>
+        canvas = document.getElementById("canv");
+        ctx = canvas.getContext("2d");
+        nave = new Image();
+        nave.src = "img/nave.png"
+        x = 400 - nave.width/2;
+        nave.onload = function() {
+            ctx.drawImage(nave, x, 700-160);
+        }   
+        document.addEventListener("keydown",
+        function(evento) {
+            movimentaNaveTeclado(evento.keyCode);
+        });
+        </script>
+        </body> </html>
